@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="table">
+        <input type="text" id="src" class="show">
+        <table class="table1">
+
+            <tr>
+                <td>
+                    <button onclick="fuelLoad('(')">(</button>
+                </td>
+                <td>
+                    <button onclick="fuelLoad(')')">)</button>
+                </td>
+                <td>
+                    <button onclick="fuelLoad('%')">%</button>
+                </td>
+                <td>
+                    <button onclick="xoaHet()">AC</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="fuelLoad(7)">7</button>
+                </td>
+                <td>
+                    <button onclick="fuelLoad(8)">8</button>
+                </td>
+                <td>
+                    <button onclick="fuelLoad(9)">9</button>
+                </td>
+                <td>
+                    <button onclick="fuelLoad('/')">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="fuelLoad(4)">4</button>
+                </td>
+                <td>
+                    <button onclick="fuelLoad(5)">5</button>
+                </td>
+                <td>
+                    <button onclick="fuelLoad(6)">6</button>
+                </td>
+                <td>
+                    <button onclick="fuelLoad('*')">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="fuelLoad(1)">1</button>
+                </td>
+                <td>
+                    <button onclick="fuelLoad(2)">2</button>
+                </td>
+                <td>
+                    <button onclick="fuelLoad(3)">3</button>
+                </td>
+                <td>
+                    <button onclick="fuelLoad('-')">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="fuelLoad(0)">0</button>
+                </td>
+                <td>
+                    <button onclick="fuelLoad('.')">.</button>
+                </td>
+
+                <td>
+                    <button onclick="fuelLoad('+')">+</button>
+                </td>
+                <td>
+                    <button onclick="tinh()">=</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    function fuelLoad(data) {
+        document.getElementById('src').value += data;
+    }
+    function tinh() {
+        document.getElementById('src').value = eval(document.getElementById('src').value);
+    }
+    function  xoaHet() {
+        document.getElementById('src').value = ' '
+    }
+</script>
+</html>
