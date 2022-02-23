@@ -1,18 +1,74 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Title</title>
+    <!--    <style>-->
+    <!--        .chinh {-->
+    <!--            width: 150px;-->
+    <!--            height: 150px;-->
+    <!--        }-->
+    <!--    </style>-->
 </head>
 <body>
-<button type="button" onclick="checkKnot()">Click me!</button>
+<h1>C0222I1</h1>
+<img id="chinh" src="image/chinh.jpg">
+<select  id="mySelect1" onchange="onChange()">
+    <option value="Hà Nội">Ha Noi</option>
+    <option value="Hải Dương">Hai Duong</option>
+    <option value="Hải Phòng">Hai Phong</option>
+</select>
+<select  id="mySelect2">
+    <option value="JAVA">JAVA</option>
+    <option value="JS">JS</option>
+    <option value="HTML">HTML</option>
+</select>
+<button onclick="changeSize()">Change Size</button>
+
+<h1 id="gi_day" onmouseover="changeColor()" onmouseout="changeColorOut()">Bắt sự kiện onmouseover - onmouseout</h1>
+<h1 id="gi_day2">Bắt sự kiện mouseover - mouseout</h1>
 </body>
-<script>
-function checkKnot() {
-    alert('xin chào!');
-}
-</script>
+
 </html>
+<script>
+    document.write('<h1>Lớp Tôi học rất tốt </h1>')
+    let img = document.getElementById('chinh');
+    function changeSize() {
+        img.style.width = 150 + 'px';
+        img.style.height = 150 + 'px';
+    }
+    //Cách 1 BẮT SỰ KIỆN onchange thẻ HTML
+
+    function onChange() {
+        let change1 = document.getElementById('mySelect1').value;
+        alert(change1);
+    }
+
+    // Cách 2: Bắt sự kiện : change ở trong hàm addEventListener()
+    function change() {
+        let change2 = document.getElementById('mySelect2').value;
+        alert(change2)
+    }
+    addEventListener('change',change)
+
+    //Bắt sự kiện onmouseover - onmouseout trực tiếp trên thẻ HTML
+    let gi_day = document.getElementById('gi_day');
+    function changeColor() {
+        gi_day.style.color = 'red';
+    }
+    function changeColorOut() {
+        gi_day.style.color = 'green';
+    }
+
+    //Bắt sự kiện mouseover - mouseout thông qua addEventListener()
+    let gi_day3 = document.getElementById('gi_day2')
+    function changeColor2() {
+        gi_day3.style.color = 'red';
+    }
+    function changeColorOut2() {
+        gi_day3.style.color = 'green';
+    }
+    gi_day3.addEventListener('mouseover', changeColor2)
+    gi_day3.addEventListener('mouseout', changeColorOut2)
+</script>
