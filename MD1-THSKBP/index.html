@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body  onload="doReady()">
-<img id="nobita" src="./image/img.png" alt="dep" style="position:absolute;left:50px; top:50px;" height="210" width="188"/>
+<img id="nobita" src="./image/img.png" alt="dep" style="position:relative;left:0px; top:0px;" height="210" width="188"/>
 </body>
 <script>
     function upArrowPressed() {
@@ -20,7 +20,7 @@
     // Bước 3: Xây dựng các hàm xử lý khi nhấn phím xuống
     function downArrowPressed() {
         let element = document.getElementById('nobita');
-        element.style.bottom = parseInt(element.style.bottom) - 15 + 'px'
+        element.style.top = parseInt(element.style.top) + 15 + 'px'
     }
 
     // Bước 4: Xây dựng các hàm xử lý khi nhấn phím sang trái
@@ -32,7 +32,7 @@
     // Bước 4: Xây dựng các hàm xử lý khi nhấn phím sang phải
     function rightArrowPressed() {
         let element = document.getElementById('nobita');
-        element.style.right = parseInt(element.style.right) - 15 + 'px'
+        element.style.left = parseInt(element.style.left) + 15 + 'px'
     }
     // Bước 6: Xây dựng các hàm nhận các phím
         function moveSelection(evt) {
@@ -40,10 +40,10 @@
                 case 37:
                     leftArrowPressed();
                     break;
-                case 38:
+                case 39:
                     rightArrowPressed();
                     break;
-                case 39:
+                case 38:
                     upArrowPressed();
                     break;
                 case 40:
