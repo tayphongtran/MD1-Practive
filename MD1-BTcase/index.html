@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="">
+    <input id="imPort" type="number" value="1">
+    <button onclick="tinhSongay()" type="button">Tính số ngày</button>
+
+
+    <p id="result">
+
+    </p>
+    <span>và</span>
+    <p id="check">
+
+    </p>
+    <input id="vss" type="number" value="1">
+    <button onclick="tinhSongaydb()" type="button">Tính số ngày</button>
+
+</form>
+</body>
+
+<script>
+    function tinhSongay() {
+        let d = +document.getElementById('imPort').value;
+
+        switch (d) {
+            case 1:
+               d = ('Tháng 1 có 31 ngày');
+               break;
+            case 2:
+                d =('Tháng 2 có 28 ngày');
+                break;
+            case 3:
+                d = ('Tháng 3 có 31 ngày');
+                break;
+            case 4:
+                d = ('Tháng 4 có 30 ngày');
+                break;
+            case 5:
+                d = ('Tháng 5 có 31 ngày');
+                break;
+            case 6:
+                d = ('Tháng 6 có 30 ngày');
+                break;
+            case 7:
+                d = ('Tháng 7 có 31 ngày');
+                break;
+            case 8:
+                d = ('Tháng 8 có 30 ngày');
+                break;
+            case 9:
+                d = ('Tháng 9 có 31 ngày');
+                break;
+            case 10:
+                d = ('Tháng 10 có 30 ngày');
+                break;
+            case 11:
+                d = ('Tháng 11 có 31 ngày');
+                break;
+            case 12:
+                d = ('Tháng 12 có 31 ngày');
+                break;
+
+        }
+        document.getElementById('result').innerText = d
+    }
+    function tinhSongaydb() {
+        let db = +document.getElementById('vss').value;
+
+        switch (db) {
+            case 1:
+                db = ('Tháng 1 có 31 ngày');
+                break;
+            case 2:
+                db =('Tháng 2 có 28 ngày');
+                break;
+            case 3:
+                db = ('Tháng 3 có 31 ngày');
+                break;
+            case 4:
+                db = ('Tháng 4 có 30 ngày');
+                break;
+            case 5:
+                db = ('Tháng 5 có 31 ngày');
+                break;
+            case 6:
+                db = ('Tháng 6 có 30 ngày');
+                break;
+            case 7:
+                db = ('Tháng 7 có 31 ngày');
+                break;
+            case 8:
+                db = ('Tháng 8 có 30 ngày');
+                break;
+            case 9:
+                db = ('Tháng 9 có 31 ngày');
+                break;
+            case 10:
+                db = ('Tháng 10 có 30 ngày');
+                break;
+            case 11:
+                db = ('Tháng 11 có 31 ngày');
+                break;
+            case 12:
+                db = ('Tháng 12 có 31 ngày');
+                break;
+
+        }
+        document.getElementById('check').innerText = db
+    }
+
+</script>
+</html>
